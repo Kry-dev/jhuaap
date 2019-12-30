@@ -1,0 +1,124 @@
+#pageHeader,
+#schemePreviewHead,
+div.pageTitle{
+    color: #fff;
+    height: $header-height;
+    max-height: $header-height;
+    //display: flex;
+    flex-directiown: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 40px;
+    display: none !important;
+    &:before {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 60%;
+        max-width: 690px;
+        background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/header-mask.png") no-repeat 0 0;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    &:after {
+        content: "";
+        display: block;
+        width: 267px;
+        height: 87px;
+        background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/logo.png") no-repeat 0 0;
+        background-size: contain;
+        position: absolute;
+        right: 40px;
+        top: 0;
+    }
+    
+    #pageTitleBar.pageTitleIcon {
+        img{
+            display: none;
+        }
+    }
+}
+div.pageTitle h1,
+div#lightboxContent h2,
+#pageTitleText span {
+    color: $white !important;
+}
+div.pageTitleError h1,
+div.pageTitle h1,
+div.pageTitleError h1 {
+    font-size: $h1-font-size;
+    span{
+        span {
+            font-size: inherit;
+        }
+    }
+}
+#contentArea, #schemePreviewBody, .container {
+    padding: 0;
+    margin: 0;
+    .shadow {
+        box-shadow: none;
+        padding-bottom: 40px;
+        height: 100%;
+    }
+}
+
+.contentList, .buildList, .contentListPlain, .announcementList {
+    //PAGE CUSTOM HEADER IN 1ST ELEMENT OF LIST
+    & > li:first-child,
+    & > li.read:first-child:hover{
+        color: #fff;
+        height: $header-height;
+        max-height: $header-height;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding: 40px;
+        &:before {
+            content: "";
+            display: block;
+            height: 100%;
+            width: 60%;
+            max-width: 690px;
+            background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/header-mask.png") no-repeat bottom right;
+            background-size: contain;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 267px;
+            height: 87px;
+            background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/logo.png") no-repeat 0 0;
+            background-size: contain;
+            position: absolute;
+            right: 40px;
+            top: 0;
+        }
+        h3 {
+            font-size: $h1-font-size;
+            span {
+                font-size: inherit;
+                color: $white !important;
+            }
+        }
+        .details {
+            position: absolute;
+            top: 5rem;
+            font-size: rem(21);
+            line-height: rem(32);
+            
+            p {
+                margin-bottom: 0;
+            }
+        }
+        
+    }
+}

@@ -48,8 +48,8 @@ gulp.task("images", () => {
             })
         ])))
         .pipe(gulp.dest(paths.images.dist))
-        .pipe(debug({
-            "title": "Images"
-        }))
+        // .pipe(debug({
+        //     "title": "Images"
+        // }))
         .on("end", browsersync.reload);
 });

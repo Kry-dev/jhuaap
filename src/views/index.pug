@@ -2,10 +2,21 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "gulp-pug-starter"
+    - const title = "Course Homepage"
 
 block content
+    .locationPane
+        nav#navigationPane.navigationPane(role='navigation', aria-label='Course Menu')
+        #contentPanel.contentPane(role='main')
+            .shadow
+                #editmodeWrapper
+                    #content.contentBox
+                        include ../blocks/modules/header-home/header-home
+                        #containerdiv.container.clearfix
+                            include ../blocks/modules/home-list/home-list
+
+
 
 block scripts
-	script(src="../js/main.js")
-	script(src="../js/vendor.js")
+    //script(src="../js/main.js")
+    //script(src="../js/vendor.js")

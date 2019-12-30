@@ -1,0 +1,87 @@
+.clearfix.liItem.read .vtbegenerated {
+    .portfolio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        padding: 40px;
+        //background: $gray-100;
+        background: $white;
+        &-name {
+            width: 100%;
+        }
+        &-title {
+            font-weight: $font-weight-bold;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            font-style: 17px;
+            line-height: 27px;
+            font-weight: $font-weight-light;
+            color: #030303;
+        }
+        &-left {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        &-img{
+            display: block;
+            width: 130px;
+            height: 130px;
+            margin-left: auto;
+            img{
+                width: 100%;
+            }
+        }
+        &-social {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+            & + .portfolio-social{
+                margin-left: 1rem;
+            }
+            &-title {
+                margin-bottom: 1rem;
+            }
+            &-list {
+                list-style: none;
+                li,
+                a {
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: $blue;
+                    text-decoration: none;
+                    
+                    
+                    span {
+                        font-size: 17px;
+                        line-height: 27px;
+                        color: inherit;
+                        text-decoration: underline;
+                    }
+                }
+                a {
+                    i{
+                        color: $blue-light;
+                        margin-right: 1rem;
+                        font-size: 17px;
+                        max-width: 20px;
+                        width: 100%;
+                        text-align: center;
+                        display: inline-block;
+                        &:before {
+                            text-align: center;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+}

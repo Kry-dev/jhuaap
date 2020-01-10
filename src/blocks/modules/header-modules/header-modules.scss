@@ -1,0 +1,58 @@
+#pageHeader, #schemePreviewHead, div.pageTitle {
+    background: $pink !important;
+    &:before {
+        background: url("../img/general/pink-mask.png") no-repeat 0 0;
+    }
+}
+.contentList, .buildList, .contentListPlain, .announcementList {
+    
+    
+    //PAGE CUSTOM HEADER IN 1ST ELEMENT OF LIST
+    & > li:first-child, & > li.read:first-child:hover {
+        margin: 0 !important;
+        padding: 0 40px!important;
+        background: $pink !important;
+        &:before {
+            background: url("../img/general/pink-mask.png") no-repeat 0 0;
+        }
+        .vtbegenerated {
+            padding: 0 !important;
+        }
+        .item, .details {
+            padding: 0 !important;
+            margin-bottom: 0!important;
+        }
+        h3 {
+            text-decoration: none;
+        }
+    }
+    & > li:nth-child(2), & > li.read:nth-child(2):hover {
+        //margin: 0 !important;
+        //padding: 40px 40px 0 !important;
+        border: 0;
+        background: $white !important;
+        b .item, .details {
+            //padding: 0 !important;
+            //margin-bottom: 0!important;
+        }
+        h3 {
+            text-decoration: none;
+            font-size: $h2-font-size;
+        }
+    }
+    & > li:nth-child(3), & > li.read:nth-child(3):hover {
+        border: 0;
+        background: $white !important;
+        .item {
+            margin: 0 auto !important;
+            //padding: 0 80px;
+        }
+        h3 {
+            text-decoration: none;
+            font-size: $h2-font-size;
+        }
+        h4 {
+            font-size: $h4-font-size;
+        }
+    }
+}

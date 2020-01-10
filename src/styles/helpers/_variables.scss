@@ -12,7 +12,7 @@ $green: #00785C;
 $green-dark: #286140;
 $lilac: #55274F;
 $pink: #A93190;
-$red1: #C13414;
+$red: #C13414;
 $red2: #AD152B;
 $red3: #79222E;
 $brown: #A4522E;
@@ -40,7 +40,7 @@ $colors: map-merge(
             //"indigo":     $indigo,
             //"purple":     $purple,
             "pink":       $pink,
-            "red":        $red1,
+            "red":        $red,
             //"orange":     $orange,
             //"yellow":     $yellow,
             "green":      $green,
@@ -58,7 +58,7 @@ $secondary:     $gray-400;
 $success:       $green;
 //$info:          $cyan;
 //$warning:       $yellow;
-$danger:        $red1;
+$danger:        $red;
 $light:         $gray-100;
 $dark:          $black;
 $theme-colors: ();

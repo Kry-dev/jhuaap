@@ -34,6 +34,7 @@ body {
     list-style: none;
     padding-bottom: 80px;
 }
+
 #containerdiv,
 #containerdiv.container {
     padding: 0;
@@ -42,10 +43,65 @@ body {
     margin-right: auto;
     margin-left: auto;
     .vtbegenerated {
-        
         .container {
             padding-right: 15px;
             padding-left: 15px;
+        }
+    }
+}
+.contentList, .buildList, .contentListPlain, .announcementList {
+    .vtbegenerated {
+        ul{
+            margin-bottom: 1rem;
+            padding-left: 40px;
+            list-style-type: disc;
+            & > Li {
+                margin-bottom: .5rem;
+            }
+        }
+        
+        ol {
+            padding: 0;
+            margin-bottom: 1rem;
+            counter-reset: item;
+            & > li {
+                margin: 0 0 .5rem;
+                padding: 0 0 0 40px;
+                text-indent: -33px;
+                list-style-type:none;
+                counter-increment:item;
+                &::before {
+                    display: inline-block;
+                    width: 1.5em;
+                    padding-right: 0.5em;
+                    font-weight: bold;
+                    text-align: right;
+                    content: counter(item) ".";
+                }
+            }
+        }
+        ul,ol {
+            a {
+                color: $primary;
+                text-decoration: underline;
+            }
+        }
+        p {
+            strong,b {
+                font-weight: $font-weight-bold;
+            }
+        }
+        .read-more {
+            font-weight: 700;
+            color: #000;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+            border-bottom: 1px solid $blue-light;
+            padding: .5rem 4rem 0 0;
+            text-align: left;
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }

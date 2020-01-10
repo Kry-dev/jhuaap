@@ -950,13 +950,13 @@ div.pageTitleError h1 span span {
 #pageHeader,
 #schemePreviewHead,
 div.pageTitle {
-  background: #A93190 !important;
+  background: #C13414 !important;
 }
 
 #pageHeader:before,
 #schemePreviewHead:before,
 div.pageTitle:before {
-  background: url("../img/general/pink-mask.png") no-repeat 0 0;
+  background: url("../img/general/red-mask.png") no-repeat 0 0;
 }
 
 .contentList > li:first-child,
@@ -969,7 +969,7 @@ div.pageTitle:before {
 .announcementList > li.read:first-child:hover {
   margin: 0 !important;
   padding: 0 40px !important;
-  background: #A93190 !important;
+  background: #C13414 !important;
 }
 
 .contentList > li:first-child:before,
@@ -980,7 +980,7 @@ div.pageTitle:before {
 .contentListPlain > li.read:first-child:hover:before,
 .announcementList > li:first-child:before,
 .announcementList > li.read:first-child:hover:before {
-  background: url("../img/general/pink-mask.png") no-repeat 0 0;
+  background: url("../img/general/red-mask.png") no-repeat 0 0;
 }
 
 .contentList > li:first-child .vtbegenerated,
@@ -992,7 +992,7 @@ div.pageTitle:before {
 .announcementList > li:first-child .vtbegenerated,
 .announcementList > li.read:first-child:hover .vtbegenerated {
   padding: 0 !important;
-  margin-top: 0;
+  margin-top: 0 !important;
 }
 
 .contentList > li:first-child .item,
@@ -1026,207 +1026,16 @@ div.pageTitle:before {
   text-decoration: none;
 }
 
-.contentList > li:nth-child(2),
-.contentList > li.read:nth-child(2):hover,
-.buildList > li:nth-child(2),
-.buildList > li.read:nth-child(2):hover,
-.contentListPlain > li:nth-child(2),
-.contentListPlain > li.read:nth-child(2):hover,
-.announcementList > li:nth-child(2),
-.announcementList > li.read:nth-child(2):hover {
-  border: 0;
-  background: #fff !important;
-}
-
-.contentList > li:nth-child(2) h3,
-.contentList > li.read:nth-child(2):hover h3,
-.buildList > li:nth-child(2) h3,
-.buildList > li.read:nth-child(2):hover h3,
-.contentListPlain > li:nth-child(2) h3,
-.contentListPlain > li.read:nth-child(2):hover h3,
-.announcementList > li:nth-child(2) h3,
-.announcementList > li.read:nth-child(2):hover h3 {
-  text-decoration: none;
-  font-size: 2rem;
-}
-
-.contentList > li:nth-child(3),
-.contentList > li.read:nth-child(3):hover,
-.buildList > li:nth-child(3),
-.buildList > li.read:nth-child(3):hover,
-.contentListPlain > li:nth-child(3),
-.contentListPlain > li.read:nth-child(3):hover,
-.announcementList > li:nth-child(3),
-.announcementList > li.read:nth-child(3):hover {
-  border: 0;
-  background: #fff !important;
-}
-
-.contentList > li:nth-child(3) .item,
-.contentList > li.read:nth-child(3):hover .item,
-.buildList > li:nth-child(3) .item,
-.buildList > li.read:nth-child(3):hover .item,
-.contentListPlain > li:nth-child(3) .item,
-.contentListPlain > li.read:nth-child(3):hover .item,
-.announcementList > li:nth-child(3) .item,
-.announcementList > li.read:nth-child(3):hover .item {
-  margin: 0 auto !important;
-}
-
-.contentList > li:nth-child(3) h3,
-.contentList > li.read:nth-child(3):hover h3,
-.buildList > li:nth-child(3) h3,
-.buildList > li.read:nth-child(3):hover h3,
-.contentListPlain > li:nth-child(3) h3,
-.contentListPlain > li.read:nth-child(3):hover h3,
-.announcementList > li:nth-child(3) h3,
-.announcementList > li.read:nth-child(3):hover h3 {
-  text-decoration: none;
-  font-size: 2rem;
-}
-
-.contentList > li:nth-child(3) h4,
-.contentList > li.read:nth-child(3):hover h4,
-.buildList > li:nth-child(3) h4,
-.buildList > li.read:nth-child(3):hover h4,
-.contentListPlain > li:nth-child(3) h4,
-.contentListPlain > li.read:nth-child(3):hover h4,
-.announcementList > li:nth-child(3) h4,
-.announcementList > li.read:nth-child(3):hover h4 {
-  font-size: 1.5rem;
-}
-
-.contextItemDetailsHeaders .detailsLabel {
-  display: none;
-}
-
-.contentList > li,
-.buildList > li,
-.contentListPlain > li,
-.announcementList > li {
-  border-top: 1px solid #E6E6E6;
-}
-
-.contentList > li h3,
-.buildList > li h3,
-.contentListPlain > li h3,
-.announcementList > li h3 {
-  font-size: 1.5rem;
-}
-
-.contentList > li.clearfix.liItem.read,
-.buildList > li.clearfix.liItem.read,
-.contentListPlain > li.clearfix.liItem.read,
-.announcementList > li.clearfix.liItem.read {
+.clearfix.liItem.read {
   margin: 0 auto;
   padding: 40px 80px;
 }
 
-.contentList > li.clearfix.liItem.read > .item.clearfix,
-.buildList > li.clearfix.liItem.read > .item.clearfix,
-.contentListPlain > li.clearfix.liItem.read > .item.clearfix,
-.announcementList > li.clearfix.liItem.read > .item.clearfix {
-  margin-bottom: .5rem;
+.clearfix.liItem.read h3 img {
+  margin-right: 1rem;
 }
 
-.contentList > li:nth-child(2n),
-.buildList > li:nth-child(2n),
-.contentListPlain > li:nth-child(2n),
-.announcementList > li:nth-child(2n) {
-  background: #F9F9F9;
+.clearfix.liItem.read + li {
   border-top: 1px solid #E6E6E6;
 }
-
-.contentList > li:last-child,
-.buildList > li:last-child,
-.contentListPlain > li:last-child,
-.announcementList > li:last-child {
-  border-bottom: 1px solid #E6E6E6;
-}
-
-.contentList > li .item h3 a span,
-.contentList > li .individualContent-link > span,
-.contentList > li .read > a > span,
-.buildList > li .item h3 a span,
-.buildList > li .individualContent-link > span,
-.buildList > li .read > a > span,
-.contentListPlain > li .item h3 a span,
-.contentListPlain > li .individualContent-link > span,
-.contentListPlain > li .read > a > span,
-.announcementList > li .item h3 a span,
-.announcementList > li .individualContent-link > span,
-.announcementList > li .read > a > span {
-  text-decoration: underline;
-}
-
-.contentList > li .vtbegenerated,
-.buildList > li .vtbegenerated,
-.contentListPlain > li .vtbegenerated,
-.announcementList > li .vtbegenerated {
-  margin-top: 2rem;
-}
-
-.contentList > li .vtbegenerated h5,
-.contentList > li .vtbegenerated h4,
-.contentList > li .vtbegenerated h6,
-.buildList > li .vtbegenerated h5,
-.buildList > li .vtbegenerated h4,
-.buildList > li .vtbegenerated h6,
-.contentListPlain > li .vtbegenerated h5,
-.contentListPlain > li .vtbegenerated h4,
-.contentListPlain > li .vtbegenerated h6,
-.announcementList > li .vtbegenerated h5,
-.announcementList > li .vtbegenerated h4,
-.announcementList > li .vtbegenerated h6 {
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: .5rem;
-}
-
-.contentList > li .vtbegenerated p,
-.buildList > li .vtbegenerated p,
-.contentListPlain > li .vtbegenerated p,
-.announcementList > li .vtbegenerated p {
-  color: #51453D;
-  line-height: 2rem;
-  font-size: 1.3125rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-}
-
-.contentList > li .vtbegenerated p strong,
-.contentList > li .vtbegenerated p b,
-.buildList > li .vtbegenerated p strong,
-.buildList > li .vtbegenerated p b,
-.contentListPlain > li .vtbegenerated p strong,
-.contentListPlain > li .vtbegenerated p b,
-.announcementList > li .vtbegenerated p strong,
-.announcementList > li .vtbegenerated p b {
-  font-weight: 700;
-}
-
-.contentList > li .vtbegenerated a,
-.buildList > li .vtbegenerated a,
-.contentListPlain > li .vtbegenerated a,
-.announcementList > li .vtbegenerated a {
-  font-weight: 700;
-  color: #000;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  border-bottom: 1px solid #68ACE5;
-  padding: .5rem 4rem 0 0;
-  text-align: left;
-}
-
-.contentList > li .vtbegenerated a:hover,
-.contentList > li .vtbegenerated a:focus,
-.buildList > li .vtbegenerated a:hover,
-.buildList > li .vtbegenerated a:focus,
-.contentListPlain > li .vtbegenerated a:hover,
-.contentListPlain > li .vtbegenerated a:focus,
-.announcementList > li .vtbegenerated a:hover,
-.announcementList > li .vtbegenerated a:focus {
-  text-decoration: none;
-  border-bottom: 1px solid #002D72;
-}
-/*# sourceMappingURL=maps/course-modules.css.map */
+/*# sourceMappingURL=maps/module-1.css.map */

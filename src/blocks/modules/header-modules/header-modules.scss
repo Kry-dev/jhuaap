@@ -17,6 +17,7 @@
         }
         .vtbegenerated {
             padding: 0 !important;
+            margin-top: 0;
         }
         .item, .details {
             padding: 0 !important;
@@ -27,13 +28,9 @@
         }
     }
     & > li:nth-child(2), & > li.read:nth-child(2):hover {
-        //margin: 0 !important;
-        //padding: 40px 40px 0 !important;
         border: 0;
         background: $white !important;
         b .item, .details {
-            //padding: 0 !important;
-            //margin-bottom: 0!important;
         }
         h3 {
             text-decoration: none;
@@ -45,7 +42,6 @@
         background: $white !important;
         .item {
             margin: 0 auto !important;
-            //padding: 0 80px;
         }
         h3 {
             text-decoration: none;

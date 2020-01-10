@@ -1,0 +1,12 @@
+.clearfix.liItem.read {
+    margin: 0 auto;
+    padding: 40px 80px;
+    h3 {
+        img {
+            margin-right: 1rem;
+        }
+    }
+    & + li {
+        border-top: 1px solid $border-color;
+    }
+}

@@ -436,6 +436,97 @@ body {
   padding-left: 15px;
 }
 
+.contentList .vtbegenerated ul,
+.buildList .vtbegenerated ul,
+.contentListPlain .vtbegenerated ul,
+.announcementList .vtbegenerated ul {
+  margin-bottom: 1rem;
+  padding-left: 40px;
+  list-style-type: disc;
+}
+
+.contentList .vtbegenerated ul > Li,
+.buildList .vtbegenerated ul > Li,
+.contentListPlain .vtbegenerated ul > Li,
+.announcementList .vtbegenerated ul > Li {
+  margin-bottom: .5rem;
+}
+
+.contentList .vtbegenerated ol,
+.buildList .vtbegenerated ol,
+.contentListPlain .vtbegenerated ol,
+.announcementList .vtbegenerated ol {
+  padding: 0;
+  margin-bottom: 1rem;
+  counter-reset: item;
+}
+
+.contentList .vtbegenerated ol > li,
+.buildList .vtbegenerated ol > li,
+.contentListPlain .vtbegenerated ol > li,
+.announcementList .vtbegenerated ol > li {
+  margin: 0 0 .5rem;
+  padding: 0 0 0 40px;
+  text-indent: -33px;
+  list-style-type: none;
+  counter-increment: item;
+}
+
+.contentList .vtbegenerated ol > li::before,
+.buildList .vtbegenerated ol > li::before,
+.contentListPlain .vtbegenerated ol > li::before,
+.announcementList .vtbegenerated ol > li::before {
+  display: inline-block;
+  width: 1.5em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+
+.contentList .vtbegenerated ul a,
+.contentList .vtbegenerated ol a,
+.buildList .vtbegenerated ul a,
+.buildList .vtbegenerated ol a,
+.contentListPlain .vtbegenerated ul a,
+.contentListPlain .vtbegenerated ol a,
+.announcementList .vtbegenerated ul a,
+.announcementList .vtbegenerated ol a {
+  color: #002D72;
+  text-decoration: underline;
+}
+
+.contentList .vtbegenerated p strong,
+.contentList .vtbegenerated p b,
+.buildList .vtbegenerated p strong,
+.buildList .vtbegenerated p b,
+.contentListPlain .vtbegenerated p strong,
+.contentListPlain .vtbegenerated p b,
+.announcementList .vtbegenerated p strong,
+.announcementList .vtbegenerated p b {
+  font-weight: 700;
+}
+
+.contentList .vtbegenerated .read-more,
+.buildList .vtbegenerated .read-more,
+.contentListPlain .vtbegenerated .read-more,
+.announcementList .vtbegenerated .read-more {
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #68ACE5;
+  padding: .5rem 4rem 0 0;
+  text-align: left;
+}
+
+.contentList .vtbegenerated .read-more:hover,
+.buildList .vtbegenerated .read-more:hover,
+.contentListPlain .vtbegenerated .read-more:hover,
+.announcementList .vtbegenerated .read-more:hover {
+  text-decoration: none;
+}
+
 .blue-bg {
   position: relative;
   z-index: 2;

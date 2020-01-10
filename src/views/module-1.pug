@@ -1,0 +1,22 @@
+extends layouts/module-1-head
+include helpers/mixins
+
+block variables
+    - const title = "Introduction to Climate System"
+
+block content
+    .locationPane
+        nav#navigationPane.navigationPane(role='navigation', aria-label='Course Menu')
+        #contentPanel.contentPane(role='main')
+            .shadow
+                #editmodeWrapper
+                    #content.contentBox
+                        include ../blocks/modules/header-modules/header-modules
+                        #containerdiv.container.clearfix
+                            include ../blocks/modules/module-1-list/module-1-list
+
+
+
+block scripts
+    //script(src="../js/main.js")
+    //script(src="../js/vendor.js")

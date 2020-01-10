@@ -40,6 +40,9 @@
                 font-size: 1.3125rem;
                 font-weight: 300;
                 margin-bottom: 1.5rem;
+                strong, b {
+                    font-weight: 700;
+                }
             }
             a {
                 font-weight: $font-weight-bold;

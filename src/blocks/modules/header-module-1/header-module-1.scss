@@ -1,0 +1,30 @@
+#pageHeader, #schemePreviewHead, div.pageTitle {
+    background: $red !important;
+    &:before {
+        background: url("../img/general/red-mask.png") no-repeat 0 0;
+    }
+}
+.contentList, .buildList, .contentListPlain, .announcementList {
+    
+    
+    //PAGE CUSTOM HEADER IN 1ST ELEMENT OF LIST
+    & > li:first-child, & > li.read:first-child:hover {
+        margin: 0 !important;
+        padding: 0 40px!important;
+        background: $red !important;
+        &:before {
+            background: url("../img/general/red-mask.png") no-repeat 0 0;
+        }
+        .vtbegenerated {
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+        .item, .details {
+            padding: 0 !important;
+            margin-bottom: 0!important;
+        }
+        h3 {
+            text-decoration: none;
+        }
+    }
+}

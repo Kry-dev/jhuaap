@@ -7934,7 +7934,7 @@ ul {
   padding: 0;
 }
 
-body {
+body .contentListPlain {
   font-family: "Roboto", sans-serif;
   background: #EFEDE4;
   max-width: 1240px;
@@ -7942,8 +7942,6 @@ body {
 }
 
 .contentBox {
-  max-width: 1240px;
-  margin-left: auto;
   background: #fff;
 }
 

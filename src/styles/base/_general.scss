@@ -6,25 +6,22 @@ h1, h2, h3, h4, h5, h6, ul {
     padding: 0;
 }
 
-//.container {
-//    @include container();
-//    @include sm(max-width, rem(510));
-//    @include md(max-width, rem(690));
-//    @include lg(max-width, rem(930));
-//    @include xl(max-width, rem(1110));
-//}
-
 body {
     
     .contentListPlain {
         font-family: $font-family-base;
-        background: #EFEDE4;
+        background: $white;
     }
 }
 .contentBox {
     background: $white;
-    
-    
+}
+#courseMenuPalette ul {
+    background: transparent;
+    .invisible{
+        height: 0;
+        display: none;
+    }
 }
 .btn-dark {
     color: $white !important;
@@ -32,6 +29,7 @@ body {
 #content_listContainer{
     list-style: none;
     padding-bottom: 80px;
+    
 }
 
 #containerdiv,
@@ -45,11 +43,14 @@ body {
         .container {
             padding-right: 15px;
             padding-left: 15px;
+            border: 1px solid transparent;
+            margin: 0 auto;
         }
     }
 }
 .contentList, .buildList, .contentListPlain, .announcementList {
     .vtbegenerated {
+        
         ul{
             margin-bottom: 1rem;
             padding-left: 40px;

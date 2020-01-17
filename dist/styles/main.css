@@ -5,7 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-@import "https://stackpath.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
 @import "https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap";
 
@@ -7848,72 +7848,71 @@ template {
 }
 
 .clearfix.liItem.read {
-  padding: 0 80px;
+  padding: 20px 80px;
   margin: 40px auto;
 }
 
 .clearfix.liItem.read .item {
   padding: 0 15px;
-  margin-bottom: 2rem;
 }
 
 .clearfix.liItem.read .details {
   padding: 0 15px;
 }
 
-.clearfix.liItem.read .vtbegenerated p {
+.vtbegenerated p {
   line-height: 2rem;
   font-size: 1.3125rem;
   font-weight: 300;
 }
 
-.clearfix.liItem.read .vtbegenerated h1 {
+.vtbegenerated h1 {
   color: #000;
-  font-size: 3rem;
+  font-size: 3rem !important;
   line-height: 74px;
 }
 
-.clearfix.liItem.read .vtbegenerated h2 {
+.vtbegenerated h2 {
   color: #000;
-  font-size: 2rem;
+  font-size: 2rem !important;
   line-height: 42px;
 }
 
-.clearfix.liItem.read .vtbegenerated h3 {
+.vtbegenerated h3 {
   color: #000;
-  font-size: 1.75rem;
+  font-size: 1.75rem !important;
   line-height: 42px;
   margin-bottom: 2rem;
 }
 
-.clearfix.liItem.read .vtbegenerated h4 {
+.vtbegenerated h4 {
   color: #000;
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   line-height: 34px;
 }
 
-.clearfix.liItem.read .vtbegenerated h5 {
+.vtbegenerated h5 {
   color: #000;
-  font-size: 1.125rem;
+  font-size: 1.125rem !important;
   line-height: 30px;
 }
 
-.clearfix.liItem.read .vtbegenerated h6 {
+.vtbegenerated h6 {
   color: #000;
-  font-size: 0.875rem;
+  font-size: 0.875rem !important;
   line-height: 24px;
 }
 
-.clearfix.liItem.read .vtbegenerated ul li,
-.clearfix.liItem.read .vtbegenerated ol li {
+.vtbegenerated ul li,
+.vtbegenerated ol li {
   font-size: 1.3125rem;
   line-height: 2rem;
 }
 
-.clearfix.liItem.read .vtbegenerated ul ul,
-.clearfix.liItem.read .vtbegenerated ul ol,
-.clearfix.liItem.read .vtbegenerated ol ul,
-.clearfix.liItem.read .vtbegenerated ol ol {
+.vtbegenerated ul ul,
+.vtbegenerated ul ol,
+.vtbegenerated ol ul,
+.vtbegenerated ol ol {
   padding-left: 2rem;
 }
 
@@ -7936,13 +7935,20 @@ ul {
 
 body .contentListPlain {
   font-family: "Roboto", sans-serif;
-  background: #EFEDE4;
-  max-width: 1240px;
-  margin: 0 auto;
+  background: #fff;
 }
 
 .contentBox {
   background: #fff;
+}
+
+#courseMenuPalette ul {
+  background: transparent;
+}
+
+#courseMenuPalette ul .invisible {
+  height: 0;
+  display: none;
 }
 
 .btn-dark {
@@ -7967,6 +7973,8 @@ body .contentListPlain {
 #containerdiv.container .vtbegenerated .container {
   padding-right: 15px;
   padding-left: 15px;
+  border: 1px solid transparent;
+  margin: 0 auto;
 }
 
 .contentList .vtbegenerated ul,
@@ -8170,12 +8178,14 @@ div.pageTitleError h1 span span {
   color: #fff;
   height: 300px;
   max-height: 300px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   padding: 40px;
+  z-index: 2;
 }
 
 .contentList > li:first-child:before,
@@ -8196,6 +8206,7 @@ div.pageTitleError h1 span span {
   position: absolute;
   right: 0;
   bottom: 0;
+  z-index: -1;
 }
 
 .contentList > li:first-child:after,
@@ -8215,6 +8226,19 @@ div.pageTitleError h1 span span {
   position: absolute;
   right: 40px;
   top: 0;
+  visibility: visible;
+  z-index: 1;
+}
+
+.contentList > li:first-child .item_icon,
+.contentList > li.read:first-child:hover .item_icon,
+.buildList > li:first-child .item_icon,
+.buildList > li.read:first-child:hover .item_icon,
+.contentListPlain > li:first-child .item_icon,
+.contentListPlain > li.read:first-child:hover .item_icon,
+.announcementList > li:first-child .item_icon,
+.announcementList > li.read:first-child:hover .item_icon {
+  display: none;
 }
 
 .contentList > li:first-child h3,
@@ -8240,6 +8264,17 @@ div.pageTitleError h1 span span {
   color: #fff !important;
 }
 
+.contentList > li:first-child .item,
+.contentList > li.read:first-child:hover .item,
+.buildList > li:first-child .item,
+.buildList > li.read:first-child:hover .item,
+.contentListPlain > li:first-child .item,
+.contentListPlain > li.read:first-child:hover .item,
+.announcementList > li:first-child .item,
+.announcementList > li.read:first-child:hover .item {
+  margin: 0;
+}
+
 .contentList > li:first-child .details,
 .contentList > li.read:first-child:hover .details,
 .buildList > li:first-child .details,
@@ -8252,6 +8287,7 @@ div.pageTitleError h1 span span {
   top: 5rem;
   font-size: 1.3125rem;
   line-height: 2rem;
+  z-index: 2;
 }
 
 .contentList > li:first-child .details p,
@@ -8316,7 +8352,10 @@ div.pageTitleError h1 span span {
   max-height: 260px;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio {
+.contentList .vtbegenerated .portfolio,
+.buildList .vtbegenerated .portfolio,
+.contentListPlain .vtbegenerated .portfolio,
+.announcementList .portfolio {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -8327,90 +8366,165 @@ div.pageTitleError h1 span span {
   background: #fff;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio-name {
-  width: 100%;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-title {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio p {
-  font-style: 17px;
-  line-height: 27px;
-  font-weight: 300;
-  color: #030303;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-left {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-img {
-  display: block;
-  width: 130px;
-  height: 130px;
-  margin-left: auto;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-img img {
-  width: 100%;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social {
+.contentList .vtbegenerated .portfolio .portfolio-social-list,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list,
+.buildList .vtbegenerated .portfolio .portfolio-social-list,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list,
+.announcementList .portfolio .portfolio-social-list,
+.announcementList .portfolio ul.portfolio-social-list {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 300px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio-social + .portfolio-social {
-  margin-left: 1rem;
+.contentList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-title,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-title,
+.buildList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-title,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-title,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-title,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-title,
+.announcementList .portfolio .portfolio-social-list .portfolio-social-title,
+.announcementList .portfolio ul.portfolio-social-list .portfolio-social-title {
+  margin-bottom: 0 !important;
+  font-style: 1.5rem;
+  font-weight: 700;
+  line-height: 1 !important;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio-social-title {
-  margin-bottom: 1rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list {
-  list-style: none !important;
-  padding: 0 !important;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list li,
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a {
+.contentList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link,
+.buildList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link,
+.announcementList .portfolio .portfolio-social-list .portfolio-social-link,
+.announcementList .portfolio ul.portfolio-social-list .portfolio-social-link {
+  padding: 0;
   font-size: 17px;
   line-height: 27px;
   color: #002D72;
   text-decoration: none;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list li span,
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a span {
+.contentList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa,
+.buildList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa,
+.announcementList .portfolio .portfolio-social-list .portfolio-social-link .fa,
+.announcementList .portfolio ul.portfolio-social-list .portfolio-social-link .fa {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 20px;
+  color: #68ACE5;
+  font-size: 24px;
+  text-align: center;
+}
+
+.contentList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa:before,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa:before,
+.buildList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa:before,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa:before,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa:before,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa:before,
+.announcementList .portfolio .portfolio-social-list .portfolio-social-link .fa:before,
+.announcementList .portfolio ul.portfolio-social-list .portfolio-social-link .fa:before {
+  align-items: center;
+  margin: 0 auto;
+}
+
+.contentList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa + span,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa + span,
+.buildList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa + span,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa + span,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link .fa + span,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link .fa + span,
+.announcementList .portfolio .portfolio-social-list .portfolio-social-link .fa + span,
+.announcementList .portfolio ul.portfolio-social-list .portfolio-social-link .fa + span {
+  margin-left: 1.5rem;
+}
+
+.contentList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link span,
+.contentList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link span,
+.buildList .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link span,
+.buildList .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link span,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social-list .portfolio-social-link span,
+.contentListPlain .vtbegenerated .portfolio ul.portfolio-social-list .portfolio-social-link span,
+.announcementList .portfolio .portfolio-social-list .portfolio-social-link span,
+.announcementList .portfolio ul.portfolio-social-list .portfolio-social-link span {
   font-size: 17px;
   line-height: 27px;
   color: inherit;
   text-decoration: underline;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a i {
-  display: inline-block;
+.contentList .vtbegenerated .portfolio .portfolio-social + .portfolio-social,
+.buildList .vtbegenerated .portfolio .portfolio-social + .portfolio-social,
+.contentListPlain .vtbegenerated .portfolio .portfolio-social + .portfolio-social,
+.announcementList .portfolio .portfolio-social + .portfolio-social {
+  margin-left: 1rem;
+}
+
+.contentList .vtbegenerated .portfolio-name,
+.buildList .vtbegenerated .portfolio-name,
+.contentListPlain .vtbegenerated .portfolio-name,
+.announcementList .portfolio-name {
   width: 100%;
-  max-width: 20px;
-  color: #68ACE5;
-  margin-right: 1rem;
-  font-size: 17px;
-  text-align: center;
 }
 
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a i:before {
-  text-align: center;
+.contentList .vtbegenerated .portfolio-title,
+.buildList .vtbegenerated .portfolio-title,
+.contentListPlain .vtbegenerated .portfolio-title,
+.announcementList .portfolio-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal {
+.contentList .vtbegenerated .portfolio p,
+.buildList .vtbegenerated .portfolio p,
+.contentListPlain .vtbegenerated .portfolio p,
+.announcementList .portfolio p {
+  font-style: 17px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #030303;
+}
+
+.contentList .vtbegenerated .portfolio-left,
+.buildList .vtbegenerated .portfolio-left,
+.contentListPlain .vtbegenerated .portfolio-left,
+.announcementList .portfolio-left {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.contentList .vtbegenerated .portfolio-img,
+.buildList .vtbegenerated .portfolio-img,
+.contentListPlain .vtbegenerated .portfolio-img,
+.announcementList .portfolio-img {
+  display: block;
+  width: 130px;
+  height: 130px;
+  margin-left: auto;
+}
+
+.contentList .vtbegenerated .portfolio-img img,
+.buildList .vtbegenerated .portfolio-img img,
+.contentListPlain .vtbegenerated .portfolio-img img,
+.announcementList .portfolio-img img {
+  width: 100%;
+}
+
+.journal {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -8419,7 +8533,7 @@ div.pageTitleError h1 span span {
   border-bottom: 1px solid #E6E6E6;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-img {
+.journal-img {
   display: block;
   position: relative;
   z-index: 2;
@@ -8427,7 +8541,7 @@ div.pageTitleError h1 span span {
   height: 235px;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-img:after {
+.journal-img:after {
   content: "";
   display: block;
   position: absolute;
@@ -8441,14 +8555,14 @@ div.pageTitleError h1 span span {
   background: #68ACE5;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-img-bg {
+.journal-img-bg {
   width: 100%;
   max-width: 230px;
   height: 100%;
   max-height: 230px;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-img-icon {
+.journal-img-icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8457,7 +8571,7 @@ div.pageTitleError h1 span span {
   transform: translate(-50%, -50%);
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-descr {
+.journal-descr {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -8466,14 +8580,14 @@ div.pageTitleError h1 span span {
   margin-left: 2rem;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-descr h3,
-.clearfix.liItem.read .vtbegenerated .journal-descr h4,
-.clearfix.liItem.read .vtbegenerated .journal-descr h5 {
+.journal-descr h3,
+.journal-descr h4,
+.journal-descr h5 {
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
-.clearfix.liItem.read .vtbegenerated .journal-descr p {
+.journal-descr p {
   font-size: 1.0625rem;
   line-height: 1.6875rem;
   color: #030303;
@@ -15663,6 +15777,16 @@ div.pageTitleError h1 span span {
   }
 }
 
+@media (max-width: 992px) {
+  .contentList .vtbegenerated .portfolio-img,
+  .buildList .vtbegenerated .portfolio-img,
+  .contentListPlain .vtbegenerated .portfolio-img,
+  .announcementList .portfolio-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .table-responsive-lg {
     display: block;
@@ -15686,6 +15810,16 @@ div.pageTitleError h1 span span {
   }
 }
 
+@media (max-width: 768px) {
+  .clearfix.liItem.read {
+    padding: 25px;
+  }
+
+  .clearfix.liItem.read .details {
+    padding: 0;
+  }
+}
+
 @media (max-width: 767.98px) {
   .table-responsive-md {
     display: block;
@@ -15706,6 +15840,99 @@ div.pageTitleError h1 span span {
   .navbar-expand-md > .container-xl {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .contentList > li:first-child,
+  .contentList > li.read:first-child:hover,
+  .buildList > li:first-child,
+  .buildList > li.read:first-child:hover,
+  .contentListPlain > li:first-child,
+  .contentListPlain > li.read:first-child:hover,
+  .announcementList > li:first-child,
+  .announcementList > li.read:first-child:hover {
+    height: 400px;
+    max-height: 500px;
+  }
+
+  .contentList > li:first-child:before,
+  .contentList > li.read:first-child:hover:before,
+  .buildList > li:first-child:before,
+  .buildList > li.read:first-child:hover:before,
+  .contentListPlain > li:first-child:before,
+  .contentListPlain > li.read:first-child:hover:before,
+  .announcementList > li:first-child:before,
+  .announcementList > li.read:first-child:hover:before {
+    width: 100%;
+    background-size: cover !important;
+  }
+
+  .contentList > li:first-child:after,
+  .contentList > li.read:first-child:hover:after,
+  .buildList > li:first-child:after,
+  .buildList > li.read:first-child:hover:after,
+  .contentListPlain > li:first-child:after,
+  .contentListPlain > li.read:first-child:hover:after,
+  .announcementList > li:first-child:after,
+  .announcementList > li.read:first-child:hover:after {
+    right: auto;
+    left: 25px;
+  }
+
+  .contentList > li:first-child .details,
+  .contentList > li.read:first-child:hover .details,
+  .buildList > li:first-child .details,
+  .buildList > li.read:first-child:hover .details,
+  .contentListPlain > li:first-child .details,
+  .contentListPlain > li.read:first-child:hover .details,
+  .announcementList > li:first-child .details,
+  .announcementList > li.read:first-child:hover .details {
+    z-index: 4;
+    top: 130px;
+  }
+
+  .contentList .vtbegenerated .portfolio,
+  .buildList .vtbegenerated .portfolio,
+  .contentListPlain .vtbegenerated .portfolio,
+  .announcementList .portfolio {
+    flex-direction: column-reverse;
+  }
+
+  .contentList .vtbegenerated .portfolio-img,
+  .buildList .vtbegenerated .portfolio-img,
+  .contentListPlain .vtbegenerated .portfolio-img,
+  .announcementList .portfolio-img {
+    margin: 0 auto 1rem 0;
+  }
+
+  .contentList .vtbegenerated .portfolio .portfolio-social,
+  .buildList .vtbegenerated .portfolio .portfolio-social,
+  .contentListPlain .vtbegenerated .portfolio .portfolio-social,
+  .announcementList .portfolio .portfolio-social {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .contentList .vtbegenerated .portfolio .portfolio-social + .portfolio-social,
+  .buildList .vtbegenerated .portfolio .portfolio-social + .portfolio-social,
+  .contentListPlain .vtbegenerated .portfolio .portfolio-social + .portfolio-social,
+  .announcementList .portfolio .portfolio-social + .portfolio-social {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .journal {
+    flex-direction: column;
+  }
+
+  .journal-img {
+    margin: 0 auto 1rem;
+  }
+
+  .journal-descr {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 1rem;
   }
 }
 

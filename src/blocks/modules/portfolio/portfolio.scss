@@ -1,5 +1,20 @@
-.clearfix.liItem.read .vtbegenerated {
+.contentList .vtbegenerated, .buildList .vtbegenerated, .contentListPlain .vtbegenerated, .announcementList {
     .portfolio {
+        @include media-breakpoint-down(sm) {
+            flex-direction: column-reverse;
+            &-img {
+                margin: 0 auto 1rem 0;
+            }
+            .portfolio-social {
+                display: block;
+                width: 100%;
+                margin: 0;
+            }
+            .portfolio-social + .portfolio-social {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -9,9 +24,59 @@
         padding: 40px;
         //background: $gray-100;
         background: $white;
+        
+        .portfolio-social-list, ul.portfolio-social-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            .portfolio-social-title {
+                margin-bottom: 0 !important;
+                font-style: $h4-font-size;
+                font-weight: $font-weight-bold;
+                line-height: 1 !important;
+            }
+            .portfolio-social-link {
+                padding: 0;
+                font-size: 17px;
+                line-height: 27px;
+                color: $blue;
+                text-decoration: none;
+                .fa {
+                    display: inline-flex;
+                    justify-content: center;
+                    width: 100%;
+                    max-width: 20px;
+                    color: $blue-light;
+                    font-size: 24px;
+                    text-align: center;
+        
+                    &:before {
+                        align-items: center;
+                        margin: 0 auto;
+                    }
+                }
+                .fa + span {
+                    margin-left: 1.5rem;
+                }
+                span {
+                    font-size: 17px;
+                    line-height: 27px;
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .portfolio-social + .portfolio-social {
+            margin-left: 1rem;
+        }
         &-name {
             width: 100%;
         }
+        
         &-title {
             font-weight: $font-weight-bold;
             margin-bottom: 1rem;
@@ -23,62 +88,24 @@
             font-weight: $font-weight-light;
             color: #030303;
         }
+        
         &-left {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
         }
+        
         &-img {
             display: block;
             width: 130px;
             height: 130px;
             margin-left: auto;
+            @media (max-width: 992px) {
+                width: 70px;
+                height: 70px;
+            }
             img {
                 width: 100%;
-            }
-        }
-        &-social {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            max-width: 300px;
-            & + .portfolio-social {
-                margin-left: 1rem;
-            }
-            &-title {
-                margin-bottom: 1rem;
-            }
-            &-list {
-                list-style: none !important;
-                padding: 0 !important;
-                li, a {
-                    font-size: 17px;
-                    line-height: 27px;
-                    color: $blue;
-                    text-decoration: none;
-                    
-                    
-                    span {
-                        font-size: 17px;
-                        line-height: 27px;
-                        color: inherit;
-                        text-decoration: underline;
-                    }
-                }
-                a {
-                    i {
-                        display: inline-block;
-                        width: 100%;
-                        max-width: 20px;
-                        color: $blue-light;
-                        margin-right: 1rem;
-                        font-size: 17px;
-                        text-align: center;
-                        &:before {
-                            text-align: center;
-                        }
-                    }
-                }
             }
         }
     }

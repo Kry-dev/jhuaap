@@ -73,12 +73,14 @@ div.pageTitleError h1 {
         color: #fff;
         height: $header-height;
         max-height: $header-height;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: flex-start;
         position: relative;
         padding: 40px;
+        z-index: 2;
         &:before {
             content: "";
             display: block;
@@ -90,6 +92,7 @@ div.pageTitleError h1 {
             position: absolute;
             right: 0;
             bottom: 0;
+            z-index: -1;
         }
         &:after {
             content: "";
@@ -101,28 +104,50 @@ div.pageTitleError h1 {
             position: absolute;
             right: 40px;
             top: 0;
+            visibility: visible;
+            z-index: 1;
         }
-        
+        .item_icon {display: none;}
+        @include media-breakpoint-down(sm) {
+            height: 400px;
+            max-height: 500px;
+            &:before {
+                width: 100%;
+                background-size: cover !important;
+            }
+            &:after{
+                right: auto;
+                left: 25px;
+            }
+            .details{
+                z-index: 4;
+                top: 130px;
+            }
+        }
         h3 {
             font-size: $h1-font-size;
+            
             span {
                 font-size: inherit;
                 color: $white !important;
             }
+        }
+        .item {
+            margin: 0;
+            
         }
         .details {
             position: absolute;
             top: 5rem;
             font-size: rem(21);
             line-height: rem(32);
-            
+            z-index: 2;
             p {
                 margin-bottom: 0;
                 color: $white !important;
             }
             .vtbegenerated {
                 margin-top: 0 !important;
-                
             }
         }
         

@@ -6,7 +6,7 @@
 }
 .contentList, .buildList, .contentListPlain, .announcementList {
     
-    
+    margin: 0;
     //PAGE CUSTOM HEADER IN 1ST ELEMENT OF LIST
     & > li:first-child, & > li.read:first-child:hover {
         margin: 0 !important;
@@ -25,6 +25,22 @@
         }
         h3 {
             text-decoration: none;
+        }
+    }
+    &> li {
+        .item {
+            max-width: 1200px;
+            margin: 0 auto 2rem;
+            h3 {
+                font-weight: 700;
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+        .details {
+            max-width: 1200px;
+            margin: 0 auto;
         }
     }
 }

@@ -1,62 +1,68 @@
 //general content styles
 .clearfix.liItem.read {
-    padding: 0 80px;
+    padding: 20px 80px;
     margin: 40px auto;
     .item {
         padding: 0 15px;
-        margin-bottom: 2rem;
     }
     .details {
         padding: 0 15px;
     }
-    .vtbegenerated {
-        
-        p {
-            line-height: 2rem;
+    @media (max-width: 768px) {
+        padding: 25px;
+        .details {
+            padding: 0;
+        }
+    }
+    
+}
+.vtbegenerated {
+    
+    p {
+        line-height: 2rem;
+        font-size: 1.3125rem;
+        font-weight: $font-weight-light;
+    }
+    h1{
+        color: $black;
+        font-size: $h1-font-size !important;
+        line-height: 74px;
+    }
+    h2{
+        color: $black;
+        font-size: $h2-font-size !important;
+        line-height: 42px;
+    }
+    h3{
+        color: $black;
+        font-size: $h3-font-size !important;
+        line-height: 42px;
+        margin-bottom: 2rem;
+    }
+    h4{
+        color: $black;
+        font-size: $h4-font-size !important;
+        line-height: 34px;
+    }
+    h5{
+        color: $black;
+        font-size: $h5-font-size !important;
+        line-height: 30px;
+    }
+    h6{
+        color: $black;
+        font-size: $h6-font-size !important;
+        line-height: 24px;
+    }
+    ul,
+    ol{
+        li {
             font-size: 1.3125rem;
-            font-weight: $font-weight-light;
-        }
-        h1{
-            color: $black;
-            font-size: $h1-font-size;
-            line-height: 74px;
-        }
-        h2{
-            color: $black;
-            font-size: $h2-font-size;
-            line-height: 42px;
-        }
-        h3{
-            color: $black;
-            font-size: $h3-font-size;
-            line-height: 42px;
-            margin-bottom: 2rem;
-        }
-        h4{
-            color: $black;
-            font-size: $h4-font-size;
-            line-height: 34px;
-        }
-        h5{
-            color: $black;
-            font-size: $h5-font-size;
-            line-height: 30px;
-        }
-        h6{
-            color: $black;
-            font-size: $h6-font-size;
-            line-height: 24px;
+            line-height: 2rem;
         }
         ul,
-        ol{
-            li {
-                font-size: 1.3125rem;
-                line-height: 2rem;
-            }
-            ul,
-            ol {
-                padding-left: 2rem;
-            }
+        ol {
+            padding-left: 2rem;
         }
     }
 }

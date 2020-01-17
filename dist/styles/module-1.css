@@ -8,7 +8,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import "https://stackpath.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
 @import "https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap";
 
@@ -401,13 +401,20 @@ ul {
 
 body .contentListPlain {
   font-family: "Roboto", sans-serif;
-  background: #EFEDE4;
-  max-width: 1240px;
-  margin: 0 auto;
+  background: #fff;
 }
 
 .contentBox {
   background: #fff;
+}
+
+#courseMenuPalette ul {
+  background: transparent;
+}
+
+#courseMenuPalette ul .invisible {
+  height: 0;
+  display: none;
 }
 
 .btn-dark {
@@ -432,6 +439,8 @@ body .contentListPlain {
 #containerdiv.container .vtbegenerated .container {
   padding-right: 15px;
   padding-left: 15px;
+  border: 1px solid transparent;
+  margin: 0 auto;
 }
 
 .contentList .vtbegenerated ul,
@@ -545,409 +554,6 @@ body .contentListPlain {
 #pageHeader,
 #schemePreviewHead,
 div.pageTitle {
-  color: #fff;
-  height: 300px;
-  max-height: 300px;
-  flex-directiown: row;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding: 40px;
-  display: none !important;
-}
-
-#pageHeader:before,
-#schemePreviewHead:before,
-div.pageTitle:before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 60%;
-  max-width: 690px;
-  background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/header-mask.png") no-repeat 0 0;
-  background-size: contain;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-#pageHeader:after,
-#schemePreviewHead:after,
-div.pageTitle:after {
-  content: "";
-  display: block;
-  width: 267px;
-  height: 87px;
-  background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/logo.png") no-repeat 0 0;
-  background-size: contain;
-  position: absolute;
-  right: 40px;
-  top: 0;
-}
-
-#pageHeader #pageTitleBar.pageTitleIcon img,
-#schemePreviewHead #pageTitleBar.pageTitleIcon img,
-div.pageTitle #pageTitleBar.pageTitleIcon img {
-  display: none;
-}
-
-div.pageTitle h1,
-div#lightboxContent h2,
-#pageTitleText span {
-  color: #fff !important;
-}
-
-div.pageTitleError h1,
-div.pageTitle h1,
-div.pageTitleError h1 {
-  font-size: 3rem;
-}
-
-div.pageTitleError h1 span span,
-div.pageTitle h1 span span,
-div.pageTitleError h1 span span {
-  font-size: inherit;
-}
-
-#contentArea,
-#schemePreviewBody,
-.container {
-  padding: 0;
-  margin: 0;
-}
-
-#contentArea .shadow,
-#schemePreviewBody .shadow,
-.container .shadow {
-  box-shadow: none;
-  padding-bottom: 40px;
-  height: 100%;
-}
-
-.contentList > li:first-child,
-.contentList > li.read:first-child:hover,
-.buildList > li:first-child,
-.buildList > li.read:first-child:hover,
-.contentListPlain > li:first-child,
-.contentListPlain > li.read:first-child:hover,
-.announcementList > li:first-child,
-.announcementList > li.read:first-child:hover {
-  color: #fff;
-  height: 300px;
-  max-height: 300px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding: 40px;
-}
-
-.contentList > li:first-child:before,
-.contentList > li.read:first-child:hover:before,
-.buildList > li:first-child:before,
-.buildList > li.read:first-child:hover:before,
-.contentListPlain > li:first-child:before,
-.contentListPlain > li.read:first-child:hover:before,
-.announcementList > li:first-child:before,
-.announcementList > li.read:first-child:hover:before {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 60%;
-  max-width: 690px;
-  background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/header-mask.png") no-repeat bottom right;
-  background-size: contain;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
-.contentList > li:first-child:after,
-.contentList > li.read:first-child:hover:after,
-.buildList > li:first-child:after,
-.buildList > li.read:first-child:hover:after,
-.contentListPlain > li:first-child:after,
-.contentListPlain > li.read:first-child:hover:after,
-.announcementList > li:first-child:after,
-.announcementList > li.read:first-child:hover:after {
-  content: "";
-  display: block;
-  width: 267px;
-  height: 87px;
-  background: url("https://blackboard.jhu.edu/bbcswebdav/courses/AS.475.601.8x.SiteTemplate/img/logo.png") no-repeat 0 0;
-  background-size: contain;
-  position: absolute;
-  right: 40px;
-  top: 0;
-}
-
-.contentList > li:first-child h3,
-.contentList > li.read:first-child:hover h3,
-.buildList > li:first-child h3,
-.buildList > li.read:first-child:hover h3,
-.contentListPlain > li:first-child h3,
-.contentListPlain > li.read:first-child:hover h3,
-.announcementList > li:first-child h3,
-.announcementList > li.read:first-child:hover h3 {
-  font-size: 3rem;
-}
-
-.contentList > li:first-child h3 span,
-.contentList > li.read:first-child:hover h3 span,
-.buildList > li:first-child h3 span,
-.buildList > li.read:first-child:hover h3 span,
-.contentListPlain > li:first-child h3 span,
-.contentListPlain > li.read:first-child:hover h3 span,
-.announcementList > li:first-child h3 span,
-.announcementList > li.read:first-child:hover h3 span {
-  font-size: inherit;
-  color: #fff !important;
-}
-
-.contentList > li:first-child .details,
-.contentList > li.read:first-child:hover .details,
-.buildList > li:first-child .details,
-.buildList > li.read:first-child:hover .details,
-.contentListPlain > li:first-child .details,
-.contentListPlain > li.read:first-child:hover .details,
-.announcementList > li:first-child .details,
-.announcementList > li.read:first-child:hover .details {
-  position: absolute;
-  top: 5rem;
-  font-size: 1.3125rem;
-  line-height: 2rem;
-}
-
-.contentList > li:first-child .details p,
-.contentList > li.read:first-child:hover .details p,
-.buildList > li:first-child .details p,
-.buildList > li.read:first-child:hover .details p,
-.contentListPlain > li:first-child .details p,
-.contentListPlain > li.read:first-child:hover .details p,
-.announcementList > li:first-child .details p,
-.announcementList > li.read:first-child:hover .details p {
-  margin-bottom: 0;
-  color: #fff !important;
-}
-
-.contentList > li:first-child .details .vtbegenerated,
-.contentList > li.read:first-child:hover .details .vtbegenerated,
-.buildList > li:first-child .details .vtbegenerated,
-.buildList > li.read:first-child:hover .details .vtbegenerated,
-.contentListPlain > li:first-child .details .vtbegenerated,
-.contentListPlain > li.read:first-child:hover .details .vtbegenerated,
-.announcementList > li:first-child .details .vtbegenerated,
-.announcementList > li.read:first-child:hover .details .vtbegenerated {
-  margin-top: 0 !important;
-}
-
-.contentList .video-box,
-.buildList .video-box,
-.contentListPlain .video-box,
-.announcementList .video-box {
-  position: relative;
-  width: 100%;
-  width: 100%;
-  max-width: 460px;
-  height: 260px;
-  max-height: 260px;
-}
-
-.contentList .video-box:after,
-.buildList .video-box:after,
-.contentListPlain .video-box:after,
-.announcementList .video-box:after {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: 1;
-  right: -5px;
-  bottom: -5px;
-  width: 100%;
-  height: 100%;
-  background: #68ACE5;
-}
-
-.contentList .video-box iframe,
-.buildList .video-box iframe,
-.contentListPlain .video-box iframe,
-.announcementList .video-box iframe {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: 460px;
-  height: 260px;
-  max-height: 260px;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  border-top: 1px solid #E6E6E6;
-  border-bottom: 1px solid #E6E6E6;
-  padding: 40px;
-  background: #fff;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-name {
-  width: 100%;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-title {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio p {
-  font-style: 17px;
-  line-height: 27px;
-  font-weight: 300;
-  color: #030303;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-left {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-img {
-  display: block;
-  width: 130px;
-  height: 130px;
-  margin-left: auto;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-img img {
-  width: 100%;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 300px;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social + .portfolio-social {
-  margin-left: 1rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-title {
-  margin-bottom: 1rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list {
-  list-style: none !important;
-  padding: 0 !important;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list li,
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a {
-  font-size: 17px;
-  line-height: 27px;
-  color: #002D72;
-  text-decoration: none;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list li span,
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a span {
-  font-size: 17px;
-  line-height: 27px;
-  color: inherit;
-  text-decoration: underline;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a i {
-  display: inline-block;
-  width: 100%;
-  max-width: 20px;
-  color: #68ACE5;
-  margin-right: 1rem;
-  font-size: 17px;
-  text-align: center;
-}
-
-.clearfix.liItem.read .vtbegenerated .portfolio-social-list a i:before {
-  text-align: center;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 2rem 0;
-  border-bottom: 1px solid #E6E6E6;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-img {
-  display: block;
-  position: relative;
-  z-index: 2;
-  width: 235px;
-  height: 235px;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-img:after {
-  content: "";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  max-width: 230px;
-  height: 100%;
-  max-height: 230px;
-  background: #68ACE5;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-img-bg {
-  width: 100%;
-  max-width: 230px;
-  height: 100%;
-  max-height: 230px;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-img-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  transform: translate(-50%, -50%);
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-descr {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 60%;
-  max-width: 100%;
-  margin-left: 2rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-descr h3,
-.clearfix.liItem.read .vtbegenerated .journal-descr h4,
-.clearfix.liItem.read .vtbegenerated .journal-descr h5 {
-  font-weight: bold;
-  margin-bottom: 1.5rem;
-}
-
-.clearfix.liItem.read .vtbegenerated .journal-descr p {
-  font-size: 1.0625rem;
-  line-height: 1.6875rem;
-  color: #030303;
-  margin-bottom: 1.5rem;
-}
-
-#pageHeader,
-#schemePreviewHead,
-div.pageTitle {
   background: #C13414 !important;
 }
 
@@ -955,6 +561,13 @@ div.pageTitle {
 #schemePreviewHead:before,
 div.pageTitle:before {
   background: url("../img/general/red-mask.png") no-repeat 0 0;
+}
+
+.contentList,
+.buildList,
+.contentListPlain,
+.announcementList {
+  margin: 0;
 }
 
 .contentList > li:first-child,
@@ -1022,6 +635,36 @@ div.pageTitle:before {
 .announcementList > li:first-child h3,
 .announcementList > li.read:first-child:hover h3 {
   text-decoration: none;
+}
+
+.contentList > li .item,
+.buildList > li .item,
+.contentListPlain > li .item,
+.announcementList > li .item {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.contentList > li .item h3,
+.buildList > li .item h3,
+.contentListPlain > li .item h3,
+.announcementList > li .item h3 {
+  font-weight: 700;
+}
+
+.contentList > li .item h3 span,
+.buildList > li .item h3 span,
+.contentListPlain > li .item h3 span,
+.announcementList > li .item h3 span {
+  font-weight: 700;
+}
+
+.contentList > li .details,
+.buildList > li .details,
+.contentListPlain > li .details,
+.announcementList > li .details {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .clearfix.liItem.read {

@@ -1,0 +1,86 @@
+.home-nav {
+    display: table;
+    flex-direction: row;
+    border: 1px solid $border-color;
+    th {
+        padding: 40px;
+    }
+    a.home-nav--item {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        text-decoration: none;
+        font-size: $h6-font-size;
+        color: $black;
+        font-weight: $font-weight-bold;
+        span {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-style: inherit;
+            color: inherit;
+            font-weight: inherit;
+        }
+    }
+    .btn {
+        width: 100%;
+        font-size: $h6-font-size;
+        text-transform: uppercase;
+    }
+    .btn i {
+        margin-right: .5rem;
+        span {
+            text-decoration: underline;
+            text-decoration-color: aqua;
+        }
+    }
+    &--left, &--right {
+        padding: 40px 65px;
+    }
+    &--left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 358px;
+        background: $gray-100;
+    }
+    &--right {
+        width: 100%;
+    }
+    &--title {
+        font-size: $h2-font-size;
+        line-height: 42px;
+        font-weight: $font-weight-bold;
+        color: $black;
+        margin-bottom: 40px;
+    }
+    &--list {
+        display: flex;
+        flex-direction: row;
+        list-style: none !important;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 !important;
+        li a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: $h6-font-size;
+            color: $black;
+            font-weight: $font-weight-bold;
+            .home-nav--icon {
+                margin-bottom: 1rem;
+            }
+            span {
+                text-transform: uppercase;
+                text-decoration: none;
+                font-style: inherit;
+                color: inherit;
+                font-weight: inherit;
+            }
+        }
+    }
+}
